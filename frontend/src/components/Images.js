@@ -16,12 +16,12 @@ const Images = (props) => {
             <h3>
               {image.title == ' ' && (
                 <span>
-                  <a href={image.link} target="_blank">
+                  <a href={image.link} target="_blank" rel="noreferrer">
                     View photo
                   </a>
                 </span>
               )}
-              <a href={image.link} target="_blank">
+              <a href={image.link} target="_blank" rel="noreferrer">
                 {image.title}
               </a>
             </h3>
@@ -32,6 +32,7 @@ const Images = (props) => {
               <a
                 href={'//www.flickr.com/people/' + image.author_id}
                 target="_blank"
+                rel="noreferrer"
               >
                 {image.author.match(/"(.*?)"/)[1]}
               </a>
