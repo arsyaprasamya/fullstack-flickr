@@ -2,6 +2,7 @@
 ```
 How to run:
 1. Clone this repo
-2. Run cd frontend, then type npm i > npm start
-3. Run cd ..
-4. Run cd backend, then type npm i > npm start
+2. Type cd frontend, then run npm i
+3. Type cd ..
+4. Type cd backend, then run npm i
+5. Back to root folder -> npm start
