@@ -1,25 +1,10 @@
-const { createServer } = require('http')
 const express = require('express')
 const request = require('request')
 const app = express()
-const dev = app.get('env') !== 'production'
-const path = require('path')
 
-const normalizePort = (port) => parseInt(port, 10)
 const PORT = normalizePort(process.env.PORT || 5000)
 
-if (!dev) {
-  app.disable('x-powered-by')
-  app.use(express.static(path.resolve(__dirname, 'frontend/build')))
-
-  app.get('*', function (req, res) {
-    res.sendFile(path.resolve(__dirname, 'frontend/build', 'index.html'))
-  })
-}
-
-if (dev) {
-  app.listen(PORT, () => console.log(`server started`))
-}
+app.listen(PORT, () => console.log(`server started`))
 
 app.get('/', function (req, res) {
   res.send('hello world')
